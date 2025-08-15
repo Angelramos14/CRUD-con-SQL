@@ -56,5 +56,43 @@ namespace Modelos
                 return false;
             }
         }
+        public bool ActualizarPeliculas()
+        {
+            SqlConnection con = Conexion.Conectar();
+            string comando = "UPDATE peliculas set nombre=@nombre, director=@director, fechalanzamiento=@fecha where id_pelicula=@id";
+            SqlCommand cmd = new SqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@nombre",nombre);
+            cmd.Parameters.AddWithValue("@director", director);
+            cmd.Parameters.AddWithValue("@fecha", fechaLanzamiento);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            if (cmd.ExecuteNonQuery()>0)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public bool EliminarPelicula()
+        {
+            try
+            {
+                SqlConnection con = Conexion.Conectar();
+                string ConsultaDelete = "DELETE FROM Zapatos where id_pelicula=@id";
+                SqlCommand delete = new SqlCommand(ConsultaDelete, con);
+                delete.Parameters.AddWithValue("@id_pelicula=@id", id);
+                delete.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+
+            }
+        }
     }
 }

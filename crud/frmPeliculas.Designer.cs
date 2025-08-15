@@ -112,6 +112,7 @@
             this.btnActualizar.TabIndex = 7;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -122,18 +123,20 @@
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvPeliculas
             // 
             this.dgvPeliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeliculas.Location = new System.Drawing.Point(62, 234);
+            this.dgvPeliculas.Location = new System.Drawing.Point(35, 241);
             this.dgvPeliculas.Name = "dgvPeliculas";
             this.dgvPeliculas.ReadOnly = true;
             this.dgvPeliculas.RowHeadersVisible = false;
             this.dgvPeliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeliculas.Size = new System.Drawing.Size(695, 180);
+            this.dgvPeliculas.Size = new System.Drawing.Size(713, 180);
             this.dgvPeliculas.TabIndex = 9;
+            this.dgvPeliculas.DoubleClick += new System.EventHandler(this.dgvPeliculas_DoubleClick);
             // 
             // frmPeliculas
             // 

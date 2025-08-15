@@ -11,7 +11,7 @@ namespace Modelos
 {
     internal class Conexion
     {
-        private static string servidor = "LAB03-DS-EQ11\\SQLEXPRESS";
+        private static string servidor = "DESKTOP-JVGVM0A\\SQLEXPRESS";
         private static string baseDeDatos = "CRUD20250443";
 
         public static SqlConnection Conectar()
